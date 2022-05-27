@@ -26,9 +26,18 @@
         "name": "${NAME}",
         "labels": {
           "app":"${NAME}"
-        }
+        },
         "annotations": {
           "description": "Creates a PVC for application pods"
+        }
+      },
+      "spec": {
+        "accessModes": ["ReadWriteMany"],
+        "storageClassName": "ocs-storagecluster-cephfs",
+        "resources": {
+          "requests": {
+            "storage": 500Mi
+          }
         }
       },
     {
