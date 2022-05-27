@@ -20,6 +20,18 @@
   },
   "objects": [
     {
+      "kind": "PersistentVolumeClaim",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "${NAME}",
+        "labels": {
+          "app":"${NAME}"
+        }
+        "annotations": {
+          "description": "Creates a PVC for application pods"
+        }
+      },
+    {
       "kind": "Service",
       "apiVersion": "v1",
       "metadata": {
